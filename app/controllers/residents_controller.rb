@@ -31,7 +31,7 @@ class ResidentsController < ApplicationController
   # POST save a new resident
   def create
     @resident = Resident.create(resident_params)
-    redirect_to action: 'show', id: resident.id
+    redirect_to '/residents'
   end
 
   # PATCH/PUT save edit to specific resident
