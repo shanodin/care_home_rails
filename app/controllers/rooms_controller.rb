@@ -8,20 +8,16 @@ class RoomsController < ApplicationController
   def home
   end
 
+  # GET all rooms
   def index
     @rooms = Room.all()
     @residents = Resident.all()
   end
 
-  # GET all rooms
-  def index
-    @rooms = Room.all
-  end
-
   # GET specific room and its residents
   def show
-    @room = Rooms.find(params[:id])
-    in_room = []
+    @room = Room.find(params[:id])
+    @in_room = []
       for resident in Resident.all do
         if (@room.id === resident.room_id)
           @in_room.push(resident)
@@ -51,7 +47,7 @@ class RoomsController < ApplicationController
     room.update_attributes(room_params)
     redirect_to action: 'show', id: room.id
   end
-  
+
   # DELETE specific room
   def destroy
     room = Room.find(params[:id])

@@ -1,7 +1,7 @@
 module ResidentsHelper
 
   def options_for_select(rooms)
-    (rooms.map { |room| [room.room_name, room.id] })
+    (rooms.map { |room| [room.number, room.id] })
   end
 
   def resident_view_button(resident)

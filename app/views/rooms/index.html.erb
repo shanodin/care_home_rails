@@ -12,15 +12,13 @@
 
   <tbody>
     <% @rooms.each do |room| %>
-      <% if (room.id != 1) %>
-      <tr>
-        <td>'Room: ' <%= room.number %></td>
-        <td>'Residents: ' <% count_occupants(room, @residents) %></td>
-        <td><%= room_view_button(room)%></td>
-        <td><%= room_edit_button(room)%></td>
-        <td><%= room_delete_button(room)%></td>
-      </tr>
-    <% end %>
+        <tr>
+          <td>Room: <%= room.number %></td>
+          <td>Residents: <% count_occupants(room, @residents) %></td>
+          <td><%= room_view_button(room)%></td>
+          <td><%= room_edit_button(room)%></td>
+          <td><%= room_delete_button(room)%></td>
+        </tr>
     <% end %>
   </tbody>
 </table>
