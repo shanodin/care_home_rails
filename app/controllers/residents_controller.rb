@@ -1,7 +1,7 @@
 class ResidentsController < ApplicationController
   # validate parameters for security
   def resident_params
-    params.require(:resident).permit(:name, :age)
+    params.require(:resident).permit(:name, :age, :room_id)
   end
 
   # GET all residents
