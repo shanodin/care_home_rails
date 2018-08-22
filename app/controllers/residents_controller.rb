@@ -18,7 +18,7 @@ class ResidentsController < ApplicationController
 
   # GET page to create a new resident
   def new
-    @resident = Resident.new()
+    @resident = Resident.new
     @all_rooms = Room.all()
   end
 
@@ -31,7 +31,7 @@ class ResidentsController < ApplicationController
   # POST save a new resident
   def create
     @resident = Resident.create(resident_params)
-    redirect_to '/residents'
+    redirect_to action: 'show', id: resident.id
   end
 
   # PATCH/PUT save edit to specific resident
