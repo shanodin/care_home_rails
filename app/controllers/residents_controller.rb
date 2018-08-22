@@ -12,7 +12,7 @@ class ResidentsController < ApplicationController
 
   # GET specific resident and their room
   def show
-    @resident = find(params[:id])
+    @resident = Resident.find(params[:id])
     @room = Room.find(@resident.room_id).number
   end
 
