@@ -20,14 +20,14 @@ module RoomsHelper
     button_to "Add new resident", new_resident_path(), :method => :get
   end
 
-  def count_occupants(room, residents)
+  def count_residents(room, residents)
     count = 0
       for resident in residents do
         if (room.id === resident.room_id)
           count += 1
         end
       end
-    return count
+    return count.to_s
   end
 
 end

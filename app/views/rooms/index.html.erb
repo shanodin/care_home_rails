@@ -1,20 +1,19 @@
-<h1>Rooms</h1>
+<h2>Rooms</h2>
 
 <%= new_room_button() %>
 
 <table>
   <thead>
-    <tr>
-      <th>Number</th>
-      <th colspan="3"></th>
-    </tr>
+    <th>Room</th>
+    <th>Number of Residents</th>
+    <th colspan="3"></th>
   </thead>
 
   <tbody>
     <% @rooms.each do |room| %>
         <tr>
-          <td>Room: <%= room.number %></td>
-          <td>Residents: <% count_occupants(room, @residents) %></td>
+          <td><%= room.number %></td>
+          <td><% count_residents(room, @residents) %></td>
           <td><%= room_view_button(room)%></td>
           <td><%= room_edit_button(room)%></td>
           <td><%= room_delete_button(room)%></td>

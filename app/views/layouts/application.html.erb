@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
     <title>Caresourcer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,8 +9,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+    <h1>Rooms for Residents</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/rooms">Rooms</a></li>
+        <li><a href="/residents">Residents</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <p id="footer-text">Built with Ruby on Rails, HTML, and CSS by Alice Rees.</p>
+  </footer>
 </html>

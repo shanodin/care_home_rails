@@ -1,9 +1,9 @@
-<h1><strong>Room Number:</strong><%= @room.number %></h1>
+<h2><strong>Room Number: </strong><%= @room.number %></h2>
 
 <%= room_edit_button(@room)%>
 
 
-<p>Current Residents:</p>
+<h3>Current Residents:</h3>
 
 <%if @in_room.length > 0 %>
     <% @in_room.each do |resident|%>
