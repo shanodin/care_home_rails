@@ -15,8 +15,8 @@
  */
 
  body {
-   background-color: ivory;
-   color: darkgray;
+   background-color: #ffda99;
+   color: #051959;
    font-family: 'Lato', sans-serif;
 }
 
@@ -39,12 +39,14 @@ h2 {
   float: right;
   display: flex;
   justify-content: space-around;
-  padding: 15px;
+  padding: 10px;
+  margin: 10px;
   text-decoration: none;
 }
 
 nav li :hover {
-  background-color: antiquewhite;
+  background-color: #DB7450;
+  color: #8e8d8a;
 }
 
 table, th, tr, td {
@@ -53,7 +55,7 @@ table, th, tr, td {
 }
 
 table {
-  width: 500px;
+  width: auto;
   font-size: 18px;
 }
 
@@ -64,6 +66,11 @@ th, td {
 th {
   text-transform: uppercase;
   text-align: left;
+  background-color: #598e96;
+}
+
+tr:nth-child(even) {
+  background-color: #598e96;
 }
 
 td {
@@ -78,7 +85,41 @@ input {
   display: block;
 }
 
+input[type=submit] {
+  background-color: #B8AE9E;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+  border: solid;
+  border-color: grey;
+  margin: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
 
+input[type=submit]:hover {
+  background-color: #edc7b7;
+}
+
+select {
+  border: darkgray;
+  font-size: 14px;
+  padding: 5px;
+  height: 34px;
+  width: 240px;
+}
+
+select:focus {
+  background: #edc7b7;
+}
+
+legend {
+  font-size: 30px;
+}
 
 footer {
   position: fixed;

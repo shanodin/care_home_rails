@@ -21,13 +21,13 @@ module RoomsHelper
   end
 
   def count_residents(room, residents)
-    count = 0
+    res_count = 0
       for resident in residents do
         if (room.id === resident.room_id)
-          count += 1
+          res_count += 1
         end
       end
-    return count.to_s
+    return res_count
   end
 
 end
