@@ -1,24 +1,12 @@
-# README
+Rails app to allow assigning residents to rooms in a browser.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to run the test suite - whilst in the app folder in the terminal, type "rails test"
 
-Things you may want to cover:
+How to run the app -
 
-* Ruby version
+in the terminal:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-type "bundle install" to install relevant gems
+-type "rake db:migrate"
+-type "rake db:seed"
+-type "rails server" and then go to http://localhost:3000/
